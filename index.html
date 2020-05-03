@@ -15,7 +15,22 @@
           <div class="row">
             <div class="three wide center aligned column">
               <div class="avatar-wrapper">
+                <!-- Використання даного <style> є обумовлена лиш зміною одного елемента (хоч і перечить патерну) -->
+                <style>
+                  #animation {
+                    position: absolute;
+                    width: 180px;
+                    height: 300px;
+                    transition: opacity 0.7s ease-in-out;
+                    opacity: 0;
+                  }
+
+                  #animation:hover {
+                    opacity: 1;
+                  }
+                </style>
                 <img class="avatar" src="./img/avatar.jpg" alt="MyLogo">
+                <img class="avatar" id="animation" src="./img/avatar.gif" alt="MyLogo">
               </div>
             </div>
             <div class="thirteen wide column">
